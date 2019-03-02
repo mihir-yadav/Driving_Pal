@@ -1,0 +1,29 @@
+we’ll be monitoring the eye aspect ratio to see if the value falls but does not increase again, thus implying that the person has closed their eyes.
+Algorithm for facial_landmark detector:
+Its alternate in opencv is Facemark
+
+This method starts by using:
+
+1)    A training set of labeled facial landmarks on an image. These images are manually labeled, specifying specific (x, y)-coordinates of regions surrounding each facial structure.
+2)    Priors, of more specifically, the probability on distance between pairs of input pixels.
+
+Given this training data, an ensemble of regression trees are trained to estimate the facial landmark positions directly from the pixel intensities themselves (i.e., no “feature extraction” is taking place).
+This would return a shape object (collection of coordinates for the all landmarks ).
+with the help of this we get location of eyes which we convert to a np array of 12 ordered pairs indicating the locations of the 2 eyes	.
+
+we then evaluate eye aspect ratio as (V1+V2)/(2*H) for each eye and then avg of them.
+
+Our drowsiness detector hinged on two important computer vision techniques:
+
+    Facial landmark detection
+    Eye aspect ratio
+
+Facial landmark prediction is the process of localizing key facial structures on a face, including the eyes, eyebrows, nose, mouth, and jawline.
+
+Specifically, in the context of drowsiness detection, we only needed the eye regions (I provide more detail on how to extract each facial structure from a face here).
+
+Once we have our eye regions, we can apply the eye aspect ratio to determine if the eyes are closed. If the eyes have been closed for a sufficiently long enough period of time, we can assume the user is at risk of falling asleep and sound an alarm to grab their attention.
+
+differnece in dlib and opencv
+    DLib is a C++ library/toolkit with python API that contains machine learning algorithms, including computer vision.
+    OpenCV is a C/C++ library wth python API of functions dealing with real-time computer vision.
