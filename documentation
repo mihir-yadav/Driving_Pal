@@ -1,4 +1,9 @@
-we’ll be monitoring the eye aspect ratio to see if the value falls but does not increase again, thus implying that the person has closed their eyes.
+We have three basic aims:
+whether the driver is drowsing.
+whether he is yawning.
+whether he is getting distracted while driving
+
+We’ll be monitoring the eye aspect ratio to see if the value falls but does not increase again, thus implying that the person has closed their eyes.
 Algorithm for facial_landmark detector:
 Its alternate in opencv is Facemark
 
@@ -27,3 +32,6 @@ Once we have our eye regions, we can apply the eye aspect ratio to determine if 
 differnece in dlib and opencv
     DLib is a C++ library/toolkit with python API that contains machine learning algorithms, including computer vision.
     OpenCV is a C/C++ library wth python API of functions dealing with real-time computer vision.
+    
+Determining whether the driver is distracted is what we do next. First we load the haar cascade frontal face and eye classifier to get roi.
+then with the help of keras' img_to_array function we convert roi in to an array and compare it with the result predicted by the model obtained from keras' load model function.If this probability is less than 0.5 then we conclude the driver is distracted, otherwise focused. 
