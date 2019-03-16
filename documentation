@@ -36,8 +36,12 @@ differnece in dlib and opencv
 Determining whether the driver is distracted is what we do next. First we load the haar cascade frontal face and eye classifier to get roi.
 then with the help of keras' img_to_array function we convert roi in to an array and compare it with the result predicted by the model obtained from keras' load model function.If this probability is less than 0.5 then we conclude the driver is distracted, otherwise focused. 
 
-WORKING OF HAAR CASCADE CLASSIFER:
+WORKING OF HAAR CASCADE CLASSIFER:you provide it with min meighbours(min needed around to conclude true positive) and scale factor(factor by which window size changes) 
  1)via sliding window collect the Haar Features.  A Haar feature considers adjacent rectangular regions at a specific location
  in a detection window, sums up the pixel intensities in each region and calculates the difference between these sums. 
  Adaboost which both selects the best features and trains the classifiers that use them.
  Boosting provides the ability to train a highly accurate classifier by taking a weighted average of the decisions made by weak learner.
+USING KERAS(python's deep learning library) predict model:
+ We load the data and create a Sequential model and add layers one at a time.
+ Training a network means finding the best set of weights to make predictions for this problem.
+ Tensorflow performs the background numerical calculations in mini-batch gradient descent to compute this weight matrix.
