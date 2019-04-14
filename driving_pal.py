@@ -197,6 +197,8 @@ while True:
 		cv2.putText(frame, "EAR: {:.2f}".format(ear), (1000, 30),
 			cv2.FONT_HERSHEY_SIMPLEX, 1, (153, 76, 0), 2)
 	
+	
+	#Distraction detector
 
  	faces = face_cascade.detectMultiScale(gray,scaleFactor=scale_factor,minNeighbors=min_neighbours,
  		minSize=(min_size_w,min_size_h),flags=cv2.CASCADE_SCALE_IMAGE)
