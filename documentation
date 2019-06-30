@@ -6,12 +6,12 @@ whether he is getting distracted while driving
 
 We’ll be monitoring the eye aspect ratio to see if the value falls but does not increase again, thus implying
 that the person has closed their eyes.
-Algorithm for facial_landmark detector:
+Algorithm for facial_landmark predictor:
 Its alternate in opencv is Facemark
 
 This method starts by using:
 
-1)    A training set of labeled facial landmarks on an image. These images are manually labeled, specifying 
+1)    A training set of labelled facial landmarks on an image. These images are manually labeled, specifying 
 specific (x, y)-coordinates of regions surrounding each facial structure.
 2)    Priors, of more specifically, the probability on distance between pairs of input pixels.
 
