@@ -1,0 +1,4 @@
+I generated 'eye' dataset by capturing my random eye movement in a live feed and converting the ROI of every frame to image for 15 minutes.  
+This generated around 3k images consisting of distracted eyes and focused eyes.  
+Used keras and fed this dataset to a convolutional neural network model to perform clustering.  
+Model returned a probabilty, If this probability is less than 0.5 then we conclude the driver is distracted and warn him, otherwise let him enjoy the ride.
