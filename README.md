@@ -1,2 +1,4 @@
 # Driving_Pal
-A drowsiness and distraction detector using openCV, dlib and keras which would monitor the eyes of the vehicle driver and activate a sound alarm if he dozes during driving. If he is not dozing, but yawning, then remind him to stop nearby for a coffee.
+A drowsiness and distraction detector developed using openCV and CNN,
+sounds an alarm when the driver gets distracted or dozes off while driving.
+![image](https://github.com/mihir-yadav/Driving_Pal/blob/master/Demo/test_driver_distracted.png?raw=true) 
